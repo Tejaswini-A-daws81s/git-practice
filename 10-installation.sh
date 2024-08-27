@@ -10,13 +10,13 @@ fi
 
 dnf install git -y
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
    echo "Not Installed please check it............"
    install dnf git -y
 
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then 
    echo "Installation Failed"
    exit 1
