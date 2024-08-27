@@ -1,3 +1,5 @@
 #!/bin/bash
 
-date
+VARIABLE=$(date +%F)
+
+echo "Today's date is: $VARIABLE"
