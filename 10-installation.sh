@@ -14,6 +14,7 @@ if [ $? -ne 0 ]
 then
    echo "Not Installed please check it............"
    install dnf git -y
+   exit 1
 
 
 # if [ $? -ne 0 ]
