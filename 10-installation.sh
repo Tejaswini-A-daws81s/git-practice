@@ -8,7 +8,7 @@ then
    exit 1 # If user id is other than 0 come out of the if condition. Donot execute further
 fi
 
-dnf install git -y
+dnf install gittt -y
 
 if [ $? -ne 0 ]
 then
@@ -16,14 +16,14 @@ then
    install dnf git -y
 
 
-if [ $? -ne 0 ]
-then 
-   echo "Installation Failed"
-   exit 1
-else
-   echo "Installation Successfull"   
+# if [ $? -ne 0 ]
+# then 
+#    echo "Installation Failed"
+#    exit 1
+# else
+#    echo "Installation Successfull"   
 
-fi
+# fi
 
 else
    echo "Git already installed........."
