@@ -8,25 +8,46 @@ then
    exit 1 # If user id is other than 0 come out of the if condition. Donot execute further
 fi
 
-dnf install gittt -y
-
-if [ $? -ne 0 ]
-then
-   echo "Not Installed please check it............"
-   install dnf git -y
-   exit 1
-
+# dnf install gittt -y
 
 # if [ $? -ne 0 ]
-# then 
-#    echo "Installation Failed"
+# then
+#    echo "Not Installed please check it............"
+#    install dnf git -y
 #    exit 1
-# else
-#    echo "Installation Successfull"   
 
-# fi
+
+# # if [ $? -ne 0 ]
+# # then 
+# #    echo "Installation Failed"
+# #    exit 1
+# # else
+# #    echo "Installation Successfull"   
+
+# # fi
+
+# else
+#    echo "Git already installed........."
+
+# fi   
+
+dnf list installed mysql
+
+if [ $? -ne 0 ]
+then 
+   echo "Mysql is not installed..........Please check it..."
+   
+   dnf install mysql -y
+   if [ $? -ne 0 ]
+   then
+      echo "Mysql installation failed......."
+      exit 1
+    else
+       echo "Mysql installation is successfull..........."
+
+    fi  
 
 else
-   echo "Git already installed........."
+   echo "Mysql is already installed nothing to do with it......."
 
-fi   
+fi
