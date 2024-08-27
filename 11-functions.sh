@@ -4,8 +4,7 @@
 USERID=$(id -u) # Passing command to check user id is equal to 0 or not
 
 VALIDATE () {
-      echo "Git list is success: $1"
-
+      echo "exit status is: $1"
 }
 
 
@@ -40,23 +39,23 @@ fi
 
 dnf list installed mysql
 
-if [ $? -ne 0 ]
-then 
-   echo "Mysql is not installed..........Please check it..."
+ VALIDATE $? 
 
-   VALIDATE $? 
+# if [ $? -ne 0 ]
+# then 
+#    echo "Mysql is not installed..........Please check it..."
    
-   dnf install mysql -y
-   if [ $? -ne 0 ]
-   then
-      echo "Mysql installation failed......."
-      exit 1
-    else
-       echo "Mysql installation is successfull..........."
+#    dnf install mysql -y
+#    if [ $? -ne 0 ]
+#    then
+#       echo "Mysql installation failed......."
+#       exit 1
+#     else
+#        echo "Mysql installation is successfull..........."
 
-    fi  
+#     fi  
 
-else
-   echo "Mysql is already installed nothing to do with it......."
+# else
+#    echo "Mysql is already installed nothing to do with it......."
 
-fi
+# fi
