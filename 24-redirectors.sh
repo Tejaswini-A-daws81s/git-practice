@@ -44,10 +44,10 @@ then
   USAGE
 fi  
 
-for package in $@
+for package in $@ &>>$LOG_FILE
 do
  dnf list installed $package
- if [ $? -ne 0]
+ if [ $? -ne 0 ]
  then
    echo -e "$package is..... $Y not installed........ going to install it $N" &>>$LOG_FILE
    dnf install $package -y &>>$LOG_FILE
