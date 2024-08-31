@@ -16,7 +16,7 @@ Y="\e[33m"
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
-      echo -e "Please use $R root Priveleges $N to run this script" &>>$LOG_FILE
+      echo -e "Please use $R root Priveleges $N to run this script" 
       exit 1
     fi
 }
