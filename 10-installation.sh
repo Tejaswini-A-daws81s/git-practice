@@ -5,7 +5,6 @@ USERID=$(id -u) # Passing command to check user id is equal to 0 or not
 
 VALIDATE () {
       echo "Git list is success: $1"
-
 }
 
 

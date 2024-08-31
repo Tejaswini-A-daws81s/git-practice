@@ -14,7 +14,7 @@ then
    exit 1 # If user id is other than 0 come out of the if condition. Donot execute further
 fi
 
-# dnf install gittt -y
+# dnf install git -y
 
 # if [ $? -ne 0 ]
 # then
