@@ -6,7 +6,7 @@ G="\e[31m"
 R="\e[32m"
 Y="\e[33m"
 
-CHECK_ROOT=(){
+CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
       echo "Please run the script with root privileges"
