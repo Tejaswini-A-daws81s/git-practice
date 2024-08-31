@@ -18,3 +18,14 @@ dnf list installed git
 
 VALIDATE $?
 
+dnf install git -y
+
+if [ $? -ne 0 ]
+then
+  echo "Not installed please check it............."
+
+else
+  echo "Already installed Nothing to do.................."
+  
+fi
+
