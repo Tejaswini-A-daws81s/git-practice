@@ -2,8 +2,8 @@
 
 USERID=$(id -u)
 
-G="\e[31m"
-R="\e[32m"
+R="\e[31m"
+G="\e[32m"
 Y="\e[33m"
 
 CHECK_ROOT(){
