@@ -11,8 +11,9 @@ CHECK_ROOT=(){
     then
       echo "Please run the script with root privileges"
       exit 1
-    fi  
-}  
+    fi 
+} 
+
 
 VALIDATE(){
     if [ $1 -ne 0 ]
