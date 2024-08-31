@@ -2,7 +2,7 @@
 LOGS_FOLDER="/var/log/shell-script"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1) # $0 gives the execution file name, pipe | takes $0 as input and cuts .sh and returns file name
 TIMESTAMP=$(date +%Y-%M-%D-%H-%M-%S)
-LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME/$TIMESTAMP"
+LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TIMESTAMP.log"
 mkdir -p $LOGS_FOLDER  # -p checks whether the folder is created or not if folder is not created it will create or else it will not create
 
 
@@ -40,7 +40,7 @@ do
  if [ $? -ne 0]
  then
    echo -e "$package is..... $Y not installed........ going to install it $N" &>>$LOG_FILE
-   dnf install $package -y
+   dnf install $package -y &>>$LOG_FILE
    VALIDATE $? "$package installation"
 
  else
